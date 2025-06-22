@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "yungando.grasskiss.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "AbstractBlockMixin",
+    "EntityShapeContentMixin",
+    "PlantBlockMixin",
+    "ShortPlantBlockMixin",
+    "FlowerBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
