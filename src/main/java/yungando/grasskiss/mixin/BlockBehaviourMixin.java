@@ -5,8 +5,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.WitherRoseBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -17,15 +16,14 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import yungando.grasskiss.GrassKiss;
 
-@Mixin(FlowerBlock.class)
-public class FlowerBlockMixin {
+@Mixin(BlockBehaviour.class)
+public class BlockBehaviourMixin {
   @Environment(EnvType.CLIENT)
   @Inject(method = "getShape", at = @At(value = "RETURN"), cancellable = true)
   private void grasskiss$getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context, CallbackInfoReturnable<VoxelShape> cir) {
     Block block = state.getBlock();
-    if (block instanceof WitherRoseBlock) return;
 
-    if (GrassKiss.toolIgnoresPlants(context)) {
+    if (GrassKiss.isIgnorablePlant(block) && GrassKiss.toolIgnoresPlants(context)) {
       cir.setReturnValue(Shapes.empty());
     }
   }

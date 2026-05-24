@@ -1,27 +1,27 @@
 {
-	"schemaVersion": 1,
-	"id": "grasskiss",
-	"version": "${version}",
-	"name": "grasskiss",
-	"description": "Weapons and pickaxes ignore grass, plants and flowers.",
-	"authors": [
-		"engiwengi",
-		"yungando"
-	],
-	"contact": {
-		"homepage": "https://github.com/yungando/grasskiss",
-		"sources": "https://github.com/yungando/grasskiss",
-		"issues": "https://github.com/yungando/grasskiss/issues"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/grasskiss/icon.png",
-	"environment": "client",
-	"mixins": [
-		"grasskiss.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.21.1",
-		"java": ">=21"
-	}
+  "schemaVersion": 1,
+  "id": "grasskiss",
+  "version": "${version}",
+  "name": "grasskiss",
+  "description": "Weapons and pickaxes ignore grass, plants and flowers.",
+  "authors": [
+    "engiwengi",
+    "yungando"
+  ],
+  "contact": {
+    "homepage": "https://github.com/yungando/grasskiss",
+    "sources": "https://github.com/yungando/grasskiss",
+    "issues": "https://github.com/yungando/grasskiss/issues"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/grasskiss/icon.png",
+  "environment": "client",
+  "mixins": [
+    "grasskiss.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=26.1",
+    "fabricloader": ">=0.18.4",
+    "java": ">=25"
+  }
 }
