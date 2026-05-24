@@ -1,13 +1,28 @@
 {
   "required": true,
   "package": "yungando.grasskiss.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_25",
   "client": [
-    "AbstractBlockMixin",
+    "BlockBehaviourMixin",
+    "BushBlockMixin",
+    "CactusFlowerBlockMixin",
+    "DryVegetationBlockMixin",
+    "FlowerBedBlockMixin",
     "FlowerBlockMixin",
-    "PlantBlockMixin",
-    "ShortPlantBlockMixin",
-    "DeadBushBlockMixin"
+    "GrowingPlantBlockMixin",
+    "HangingRootsBlockMixin",
+    "LeafLitterBlockMixin",
+    "MushroomBlockMixin",
+    "NetherFungusBlockMixin",
+    "NetherRootsBlockMixin",
+    "NetherSproutsBlockMixin",
+    "SeagrassBlockMixin",
+    "ShortDryGrassBlockMixin",
+    "SporeBlossomBlockMixin",
+    "TallDryGrassBlockMixin",
+    "TallGrassBlockMixin",
+    "TallSeagrassBlockMixin",
+    "VineBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
